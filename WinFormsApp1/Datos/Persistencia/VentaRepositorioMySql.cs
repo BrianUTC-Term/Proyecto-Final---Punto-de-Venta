@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Datos.Persistencia
@@ -7,61 +7,118 @@ namespace WinFormsApp1.Datos.Persistencia
     {
         public void Registrar(VentaCabecera venta)
         {
-            using var db = new PosDbContext();
-            using var tx = db.Database.BeginTransaction();
+            const string sqlCabecera = @"
+                INSERT INTO venta_cabecera (fecha, cliente_id, total)
+                VALUES (@fecha, @clienteId, @total);
+                SELECT LAST_INSERT_ID();";
 
-            db.VentasCabecera.Add(venta);
-            db.SaveChanges();
+            const string sqlDetalle = @"
+                INSERT INTO venta_detalle (venta_id, producto_id, cantidad, precio_unitario)
+                VALUES (@ventaId, @productoId, @cantidad, @precioUnitario);
+                SELECT LAST_INSERT_ID();";
 
-            foreach (var detalle in venta.Detalles)
+            const string sqlDescontarStock = @"
+                UPDATE productos
+                SET stock = stock - @cantidad
+                WHERE id = @productoId;";
+
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+            using var transaction = connection.BeginTransaction();
+
+            try
             {
-                detalle.VentaId = venta.Id;
-                db.VentasDetalle.Add(detalle);
-
-                var producto = db.Productos.FirstOrDefault(p => p.Id == detalle.ProductoId);
-                if (producto != null)
+                using (var comandoCabecera = new MySqlCommand(sqlCabecera, connection, transaction))
                 {
-                    producto.Stock -= detalle.Cantidad;
+                    comandoCabecera.Parameters.AddWithValue("@fecha", venta.Fecha);
+                    comandoCabecera.Parameters.AddWithValue("@clienteId", venta.ClienteId);
+                    comandoCabecera.Parameters.AddWithValue("@total", venta.Total);
+                    venta.Id = Convert.ToInt32(comandoCabecera.ExecuteScalar());
                 }
-            }
 
-            db.SaveChanges();
-            tx.Commit();
+                foreach (var detalle in venta.Detalles)
+                {
+                    detalle.VentaId = venta.Id;
+
+                    using (var comandoDetalle = new MySqlCommand(sqlDetalle, connection, transaction))
+                    {
+                        comandoDetalle.Parameters.AddWithValue("@ventaId", detalle.VentaId);
+                        comandoDetalle.Parameters.AddWithValue("@productoId", detalle.ProductoId);
+                        comandoDetalle.Parameters.AddWithValue("@cantidad", detalle.Cantidad);
+                        comandoDetalle.Parameters.AddWithValue("@precioUnitario", detalle.PrecioUnitario);
+                        detalle.Id = Convert.ToInt32(comandoDetalle.ExecuteScalar());
+                    }
+
+                    using var comandoStock = new MySqlCommand(sqlDescontarStock, connection, transaction);
+                    comandoStock.Parameters.AddWithValue("@cantidad", detalle.Cantidad);
+                    comandoStock.Parameters.AddWithValue("@productoId", detalle.ProductoId);
+                    comandoStock.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+                throw;
+            }
         }
 
         public List<VentaDetalle> ObtenerDetallesVendidos()
         {
-            using var db = new PosDbContext();
+            const string sql = @"
+                SELECT d.id, d.venta_id, d.producto_id, p.nombre AS producto_nombre, d.cantidad, d.precio_unitario
+                FROM venta_detalle d
+                INNER JOIN productos p ON p.id = d.producto_id;";
 
-            return (from d in db.VentasDetalle.AsNoTracking()
-                    join p in db.Productos.AsNoTracking() on d.ProductoId equals p.Id
-                    select new VentaDetalle
-                    {
-                        Id = d.Id,
-                        VentaId = d.VentaId,
-                        ProductoId = d.ProductoId,
-                        ProductoNombre = p.Nombre,
-                        Cantidad = d.Cantidad,
-                        PrecioUnitario = d.PrecioUnitario
-                    })
-                .ToList();
+            var detalles = new List<VentaDetalle>();
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var comando = new MySqlCommand(sql, connection);
+            using var reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                detalles.Add(new VentaDetalle
+                {
+                    Id = reader.GetInt32("id"),
+                    VentaId = reader.GetInt32("venta_id"),
+                    ProductoId = reader.GetInt32("producto_id"),
+                    ProductoNombre = reader.GetString("producto_nombre"),
+                    Cantidad = reader.GetInt32("cantidad"),
+                    PrecioUnitario = reader.GetDecimal("precio_unitario")
+                });
+            }
+
+            return detalles;
         }
 
         public List<VentaCabecera> ObtenerVentasConCliente()
         {
-            using var db = new PosDbContext();
+            const string sql = @"
+                SELECT v.id, v.fecha, v.cliente_id, c.nombre AS cliente_nombre, v.total
+                FROM venta_cabecera v
+                INNER JOIN clientes c ON c.id = v.cliente_id;";
 
-            return (from v in db.VentasCabecera.AsNoTracking()
-                    join c in db.Clientes.AsNoTracking() on v.ClienteId equals c.Id
-                    select new VentaCabecera
-                    {
-                        Id = v.Id,
-                        Fecha = v.Fecha,
-                        ClienteId = v.ClienteId,
-                        ClienteNombre = c.Nombre,
-                        Total = v.Total
-                    })
-                .ToList();
+            var ventas = new List<VentaCabecera>();
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var comando = new MySqlCommand(sql, connection);
+            using var reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                ventas.Add(new VentaCabecera
+                {
+                    Id = reader.GetInt32("id"),
+                    Fecha = reader.GetDateTime("fecha"),
+                    ClienteId = reader.GetInt32("cliente_id"),
+                    ClienteNombre = reader.GetString("cliente_nombre"),
+                    Total = reader.GetDecimal("total")
+                });
+            }
+
+            return ventas;
         }
     }
 }

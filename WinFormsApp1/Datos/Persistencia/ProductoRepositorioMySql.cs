@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Datos.Persistencia
@@ -7,70 +7,139 @@ namespace WinFormsApp1.Datos.Persistencia
     {
         public List<Producto> ObtenerTodos()
         {
-            using var db = new PosDbContext();
-            return db.Productos
-                .AsNoTracking()
-                .OrderBy(p => p.Nombre)
-                .ToList();
+            const string sql = @"
+                SELECT id, codigo, nombre, descripcion, precio, stock
+                FROM productos
+                ORDER BY nombre;";
+
+            var productos = new List<Producto>();
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var command = new MySqlCommand(sql, connection);
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                productos.Add(new Producto
+                {
+                    Id = reader.GetInt32("id"),
+                    Codigo = reader.GetString("codigo"),
+                    Nombre = reader.GetString("nombre"),
+                    Descripcion = reader.IsDBNull(reader.GetOrdinal("descripcion")) ? "" : reader.GetString("descripcion"),
+                    Precio = reader.GetDecimal("precio"),
+                    Stock = reader.GetInt32("stock")
+                });
+            }
+
+            return productos;
         }
 
         public List<Producto> Buscar(string texto)
         {
-            using var db = new PosDbContext();
             if (string.IsNullOrWhiteSpace(texto))
             {
                 return ObtenerTodos();
             }
 
-            var termino = $"%{texto}%";
-            return db.Productos
-                .AsNoTracking()
-                .Where(p => EF.Functions.Like(p.Codigo, termino) ||
-                            EF.Functions.Like(p.Nombre, termino))
-                .OrderBy(p => p.Nombre)
-                .ToList();
+            const string sql = @"
+                SELECT id, codigo, nombre, descripcion, precio, stock
+                FROM productos
+                WHERE codigo LIKE @termino OR nombre LIKE @termino
+                ORDER BY nombre;";
+
+            var productos = new List<Producto>();
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@termino", $"%{texto}%");
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                productos.Add(new Producto
+                {
+                    Id = reader.GetInt32("id"),
+                    Codigo = reader.GetString("codigo"),
+                    Nombre = reader.GetString("nombre"),
+                    Descripcion = reader.IsDBNull(reader.GetOrdinal("descripcion")) ? "" : reader.GetString("descripcion"),
+                    Precio = reader.GetDecimal("precio"),
+                    Stock = reader.GetInt32("stock")
+                });
+            }
+
+            return productos;
         }
 
         public void Agregar(Producto p)
         {
-            using var db = new PosDbContext();
-            db.Productos.Add(p);
-            db.SaveChanges();
+            const string sql = @"
+                INSERT INTO productos (codigo, nombre, descripcion, precio, stock)
+                VALUES (@codigo, @nombre, @descripcion, @precio, @stock);
+                SELECT LAST_INSERT_ID();";
+
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@codigo", p.Codigo);
+            command.Parameters.AddWithValue("@nombre", p.Nombre);
+            command.Parameters.AddWithValue("@descripcion", p.Descripcion);
+            command.Parameters.AddWithValue("@precio", p.Precio);
+            command.Parameters.AddWithValue("@stock", p.Stock);
+
+            p.Id = Convert.ToInt32(command.ExecuteScalar());
         }
 
         public void Actualizar(Producto p)
         {
-            using var db = new PosDbContext();
-            var existente = db.Productos.FirstOrDefault(x => x.Id == p.Id);
-            if (existente == null) return;
+            const string sql = @"
+                UPDATE productos
+                SET codigo = @codigo,
+                    nombre = @nombre,
+                    descripcion = @descripcion,
+                    precio = @precio,
+                    stock = @stock
+                WHERE id = @id;";
 
-            existente.Codigo = p.Codigo;
-            existente.Nombre = p.Nombre;
-            existente.Descripcion = p.Descripcion;
-            existente.Precio = p.Precio;
-            existente.Stock = p.Stock;
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
 
-            db.SaveChanges();
+            using var command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@id", p.Id);
+            command.Parameters.AddWithValue("@codigo", p.Codigo);
+            command.Parameters.AddWithValue("@nombre", p.Nombre);
+            command.Parameters.AddWithValue("@descripcion", p.Descripcion);
+            command.Parameters.AddWithValue("@precio", p.Precio);
+            command.Parameters.AddWithValue("@stock", p.Stock);
+            command.ExecuteNonQuery();
         }
 
         public void Eliminar(int id)
         {
-            using var db = new PosDbContext();
-            var existente = db.Productos.FirstOrDefault(p => p.Id == id);
-            if (existente == null) return;
+            const string sql = "DELETE FROM productos WHERE id = @id;";
 
-            db.Productos.Remove(existente);
-            db.SaveChanges();
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@id", id);
+            command.ExecuteNonQuery();
         }
 
         public void DescontarStock(int productoId, int cantidad)
         {
-            using var db = new PosDbContext();
-            var producto = db.Productos.FirstOrDefault(p => p.Id == productoId);
-            if (producto == null) return;
+            const string sql = @"
+                UPDATE productos
+                SET stock = stock - @cantidad
+                WHERE id = @productoId;";
 
-            producto.Stock -= cantidad;
-            db.SaveChanges();
+            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
+            connection.Open();
+
+            using var command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@cantidad", cantidad);
+            command.Parameters.AddWithValue("@productoId", productoId);
+            command.ExecuteNonQuery();
         }
     }
 }

@@ -22,13 +22,13 @@ namespace WinFormsApp1.Datos.Persistencia
                 SET stock = stock - @cantidad
                 WHERE id = @productoId;";
 
-            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
-            connection.Open();
-            using var transaction = connection.BeginTransaction();
+            using var conexion = new MySqlConnection(ConexionDb.CadenaConexion);
+            conexion.Open();
+            using var transaction = conexion.BeginTransaction();
 
             try
             {
-                using (var comandoCabecera = new MySqlCommand(sqlCabecera, connection, transaction))
+                using (var comandoCabecera = new MySqlCommand(sqlCabecera, conexion, transaction))
                 {
                     comandoCabecera.Parameters.AddWithValue("@fecha", venta.Fecha);
                     comandoCabecera.Parameters.AddWithValue("@clienteId", venta.ClienteId);
@@ -40,7 +40,7 @@ namespace WinFormsApp1.Datos.Persistencia
                 {
                     detalle.VentaId = venta.Id;
 
-                    using (var comandoDetalle = new MySqlCommand(sqlDetalle, connection, transaction))
+                    using (var comandoDetalle = new MySqlCommand(sqlDetalle, conexion, transaction))
                     {
                         comandoDetalle.Parameters.AddWithValue("@ventaId", detalle.VentaId);
                         comandoDetalle.Parameters.AddWithValue("@productoId", detalle.ProductoId);
@@ -49,7 +49,7 @@ namespace WinFormsApp1.Datos.Persistencia
                         detalle.Id = Convert.ToInt32(comandoDetalle.ExecuteScalar());
                     }
 
-                    using var comandoStock = new MySqlCommand(sqlDescontarStock, connection, transaction);
+                    using var comandoStock = new MySqlCommand(sqlDescontarStock, conexion, transaction);
                     comandoStock.Parameters.AddWithValue("@cantidad", detalle.Cantidad);
                     comandoStock.Parameters.AddWithValue("@productoId", detalle.ProductoId);
                     comandoStock.ExecuteNonQuery();
@@ -72,10 +72,10 @@ namespace WinFormsApp1.Datos.Persistencia
                 INNER JOIN productos p ON p.id = d.producto_id;";
 
             var detalles = new List<VentaDetalle>();
-            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
-            connection.Open();
+            using var conexion = new MySqlConnection(ConexionDb.CadenaConexion);
+            conexion.Open();
 
-            using var comando = new MySqlCommand(sql, connection);
+            using var comando = new MySqlCommand(sql, conexion);
             using var reader = comando.ExecuteReader();
             while (reader.Read())
             {
@@ -101,10 +101,10 @@ namespace WinFormsApp1.Datos.Persistencia
                 INNER JOIN clientes c ON c.id = v.cliente_id;";
 
             var ventas = new List<VentaCabecera>();
-            using var connection = new MySqlConnection(ConexionDb.CadenaConexion);
-            connection.Open();
+            using var conexion = new MySqlConnection(ConexionDb.CadenaConexion);
+            conexion.Open();
 
-            using var comando = new MySqlCommand(sql, connection);
+            using var comando = new MySqlCommand(sql, conexion);
             using var reader = comando.ExecuteReader();
             while (reader.Read())
             {

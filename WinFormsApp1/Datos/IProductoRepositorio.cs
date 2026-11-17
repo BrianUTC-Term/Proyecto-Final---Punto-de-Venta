@@ -4,8 +4,6 @@ using WinFormsApp1.Modelos;
 namespace WinFormsApp1.Datos
 {
     // Contrato de acceso a datos de productos.
-    // Para conectar la base de datos real: crea una clase que implemente esta interfaz
-    // (ej. ProductoRepositorioMySql) y registrala en RepositorioFactory.
     public interface IProductoRepositorio
     {
         List<Producto> ObtenerTodos();

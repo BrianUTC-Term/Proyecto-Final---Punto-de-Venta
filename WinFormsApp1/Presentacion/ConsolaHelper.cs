@@ -13,10 +13,8 @@ namespace WinFormsApp1.Presentacion
             }
             catch (IOException)
             {
-                // No hay una consola real adjunta (salida redirigida); se ignora.
             }
         }
-
         public static void Pausar()
         {
             Console.WriteLine();

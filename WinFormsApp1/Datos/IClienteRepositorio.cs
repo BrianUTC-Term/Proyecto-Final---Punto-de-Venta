@@ -3,7 +3,6 @@ using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Datos
 {
-    // Contrato de acceso a datos de clientes.
     public interface IClienteRepositorio
     {
         List<Cliente> ObtenerTodos();

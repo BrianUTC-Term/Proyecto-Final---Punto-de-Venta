@@ -7,21 +7,17 @@ namespace WinFormsApp1.Negocio
     public static class ProductoNegocio
     {
         public static List<Producto> ObtenerTodos() => RepositorioFactory.Productos.ObtenerTodos();
-
         public static List<Producto> Buscar(string texto) => RepositorioFactory.Productos.Buscar(texto);
-
         public static void Agregar(Producto p)
         {
             Validar(p);
             RepositorioFactory.Productos.Agregar(p);
         }
-
         public static void Actualizar(Producto p)
         {
             Validar(p);
             RepositorioFactory.Productos.Actualizar(p);
         }
-
         public static void Eliminar(int id) => RepositorioFactory.Productos.Eliminar(id);
 
         private static void Validar(Producto p)

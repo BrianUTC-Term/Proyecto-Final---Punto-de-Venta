@@ -1,6 +1,4 @@
--- Script de base de datos para el Sistema de Ventas (TechStore)
--- Ejecutar este script completo en MySQL (Workbench, consola, etc.)
--- antes de correr la aplicacion.
+
 
 CREATE DATABASE IF NOT EXISTS pos_techstore;
 USE pos_techstore;

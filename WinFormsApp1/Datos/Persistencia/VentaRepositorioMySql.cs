@@ -35,7 +35,6 @@ namespace WinFormsApp1.Datos.Persistencia
                     comandoCabecera.Parameters.AddWithValue("@total", venta.Total);
                     venta.Id = Convert.ToInt32(comandoCabecera.ExecuteScalar());
                 }
-
                 foreach (var detalle in venta.Detalles)
                 {
                     detalle.VentaId = venta.Id;
@@ -48,13 +47,11 @@ namespace WinFormsApp1.Datos.Persistencia
                         comandoDetalle.Parameters.AddWithValue("@precioUnitario", detalle.PrecioUnitario);
                         detalle.Id = Convert.ToInt32(comandoDetalle.ExecuteScalar());
                     }
-
                     using var comandoStock = new MySqlCommand(sqlDescontarStock, conexion, transaction);
                     comandoStock.Parameters.AddWithValue("@cantidad", detalle.Cantidad);
                     comandoStock.Parameters.AddWithValue("@productoId", detalle.ProductoId);
                     comandoStock.ExecuteNonQuery();
                 }
-
                 transaction.Commit();
             }
             catch
@@ -63,7 +60,6 @@ namespace WinFormsApp1.Datos.Persistencia
                 throw;
             }
         }
-
         public List<VentaDetalle> ObtenerDetallesVendidos()
         {
             const string sql = @"
@@ -89,7 +85,6 @@ namespace WinFormsApp1.Datos.Persistencia
                     PrecioUnitario = reader.GetDecimal("precio_unitario")
                 });
             }
-
             return detalles;
         }
 
@@ -117,7 +112,6 @@ namespace WinFormsApp1.Datos.Persistencia
                     Total = reader.GetDecimal("total")
                 });
             }
-
             return ventas;
         }
     }

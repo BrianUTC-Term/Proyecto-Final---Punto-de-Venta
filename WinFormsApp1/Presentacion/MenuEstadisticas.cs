@@ -3,14 +3,11 @@ using System.Linq;
 using WinFormsApp1.Negocio;
 
 namespace WinFormsApp1.Presentacion
-{
-    public static class MenuEstadisticas
-    {
-        private const int UmbralStockBajo = 10;
+{    public static class MenuEstadisticas
+    {        private const int UmbralStockBajo = 10;
 
         public static void Ejecutar()
-        {
-            string opcion;
+        {            string opcion;
             do
             {
                 ConsolaHelper.Limpiar();
@@ -46,7 +43,6 @@ namespace WinFormsApp1.Presentacion
             while (opcion != "0");
         }
 
-        // Producto mas vendido: se agrupan con LINQ todos los detalles de venta.
         private static void MostrarProductosMasVendidos()
         {
             Console.WriteLine();
@@ -66,7 +62,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine($"{item.Producto}: {item.Total} unidades vendidas");
         }
 
-        // Clientes mas frecuentes: se agrupan con LINQ las ventas por cliente.
         private static void MostrarClientesFrecuentes()
         {
             Console.WriteLine();
@@ -86,7 +81,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine($"{item.Cliente}: {item.Compras} compra(s)");
         }
 
-        // Productos con stock bajo: alerta para contactar al proveedor.
         private static void MostrarStockBajo()
         {
             Console.WriteLine();

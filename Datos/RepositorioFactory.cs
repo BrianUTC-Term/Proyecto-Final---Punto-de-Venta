@@ -1,5 +1,8 @@
 namespace WinFormsApp1.Datos
 {
+    // Punto de enlace entre negocio y datos.
+    // La implementación de las conexionas a la base de datos de realiza con el nugget MySql.Data.
+
     public static class RepositorioFactory
     {
         private static readonly IProductoRepositorio productos = new Persistencia.ProductoRepositorioMySql();

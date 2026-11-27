@@ -1,0 +1,372 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\presentacion\\consolahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\presentacion\\consolahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\presentacion\\menuestadisticas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\presentacion\\menuestadisticas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\presentacion\\menufacturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\presentacion\\menufacturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\presentacion\\menuinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\presentacion\\menuinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\persistencia\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\persistencia\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\persistencia\\clienterepositoriomysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\persistencia\\clienterepositoriomysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\negocio\\ventanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\negocio\\ventanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\negocio\\productonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\negocio\\productonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\negocio\\negocioexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\negocio\\negocioexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\negocio\\clientenegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\negocio\\clientenegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\modelos\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\modelos\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\modelos\\ventacabecera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\modelos\\ventacabecera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\modelos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\modelos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\modelos\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\modelos\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\persistencia\\ventarepositoriomysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\persistencia\\ventarepositoriomysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\persistencia\\productorepositoriomysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\persistencia\\productorepositoriomysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\iclienterepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\iclienterepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\repositoriofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\repositoriofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\iventarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\iventarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\datos\\iproductorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\datos\\iproductorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\jgarr\\documents\\github\\proyecto-final---punto-de-venta\\winformsapp1\\database\\schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{BC150CE2-BC7F-BB20-899B-A29BED553BB8}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\database\\schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductoNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\ProductoNegocio.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Negocio\\ProductoNegocio.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\ProductoNegocio.cs",
+              "RelativeToolTip": "WinFormsApp1\\Negocio\\ProductoNegocio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:32:16.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VentaNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\VentaNegocio.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Negocio\\VentaNegocio.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\VentaNegocio.cs",
+              "RelativeToolTip": "WinFormsApp1\\Negocio\\VentaNegocio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:32:32.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConsolaHelper.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\ConsolaHelper.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Presentacion\\ConsolaHelper.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\ConsolaHelper.cs",
+              "RelativeToolTip": "WinFormsApp1\\Presentacion\\ConsolaHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:37:21.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuEstadisticas.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\MenuEstadisticas.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Presentacion\\MenuEstadisticas.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\MenuEstadisticas.cs",
+              "RelativeToolTip": "WinFormsApp1\\Presentacion\\MenuEstadisticas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:37:42.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuFacturacion.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\MenuFacturacion.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Presentacion\\MenuFacturacion.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\MenuFacturacion.cs",
+              "RelativeToolTip": "WinFormsApp1\\Presentacion\\MenuFacturacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:38:15.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuInventario.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\MenuInventario.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Presentacion\\MenuInventario.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Presentacion\\MenuInventario.cs",
+              "RelativeToolTip": "WinFormsApp1\\Presentacion\\MenuInventario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:39:55.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteRepositorioMySql.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\ClienteRepositorioMySql.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\Persistencia\\ClienteRepositorioMySql.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\ClienteRepositorioMySql.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\Persistencia\\ClienteRepositorioMySql.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:23:59.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConexionDb.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\ConexionDb.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\Persistencia\\ConexionDb.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\ConexionDb.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\Persistencia\\ConexionDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:24:46.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NegocioException.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\NegocioException.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Negocio\\NegocioException.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\NegocioException.cs",
+              "RelativeToolTip": "WinFormsApp1\\Negocio\\NegocioException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:31:41.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClienteNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\ClienteNegocio.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Negocio\\ClienteNegocio.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Negocio\\ClienteNegocio.cs",
+              "RelativeToolTip": "WinFormsApp1\\Negocio\\ClienteNegocio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:31:15.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VentaDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\VentaDetalle.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Modelos\\VentaDetalle.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\VentaDetalle.cs",
+              "RelativeToolTip": "WinFormsApp1\\Modelos\\VentaDetalle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:29:49.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VentaCabecera.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\VentaCabecera.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Modelos\\VentaCabecera.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\VentaCabecera.cs",
+              "RelativeToolTip": "WinFormsApp1\\Modelos\\VentaCabecera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:29:10.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\Producto.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Modelos\\Producto.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\Producto.cs",
+              "RelativeToolTip": "WinFormsApp1\\Modelos\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:28:47.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\Cliente.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Modelos\\Cliente.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Modelos\\Cliente.cs",
+              "RelativeToolTip": "WinFormsApp1\\Modelos\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:28:30.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "VentaRepositorioMySql.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\VentaRepositorioMySql.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\Persistencia\\VentaRepositorioMySql.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\VentaRepositorioMySql.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\Persistencia\\VentaRepositorioMySql.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:26:15.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductoRepositorioMySql.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\ProductoRepositorioMySql.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\Persistencia\\ProductoRepositorioMySql.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\Persistencia\\ProductoRepositorioMySql.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\Persistencia\\ProductoRepositorioMySql.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowHgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:25:18.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IClienteRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\IClienteRepositorio.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\IClienteRepositorio.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\IClienteRepositorio.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\IClienteRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:26:36.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RepositorioFactory.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\RepositorioFactory.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\RepositorioFactory.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\RepositorioFactory.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\RepositorioFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:27:51.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IVentaRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\IVentaRepositorio.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\IVentaRepositorio.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\IVentaRepositorio.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\IVentaRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:27:43.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IProductoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\IProductoRepositorio.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Datos\\IProductoRepositorio.cs",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Datos\\IProductoRepositorio.cs",
+              "RelativeToolTip": "WinFormsApp1\\Datos\\IProductoRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T00:27:22.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "schema.sql",
+              "DocumentMoniker": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Database\\schema.sql",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Database\\schema.sql",
+              "ToolTip": "C:\\Users\\jgarr\\Documents\\GitHub\\Proyecto-Final---Punto-de-Venta\\WinFormsApp1\\Database\\schema.sql",
+              "RelativeToolTip": "WinFormsApp1\\Database\\schema.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-27T00:06:50.765Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

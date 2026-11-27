@@ -30,14 +30,17 @@ namespace WinFormsApp1.Datos.Persistencia
                     Stock = reader.GetInt32("stock")
                 });
             }
+
             return productos;
         }
+
         public List<Producto> Buscar(string texto)
         {
             if (string.IsNullOrWhiteSpace(texto))
             {
                 return ObtenerTodos();
             }
+
             const string sql = @"
                 SELECT id, codigo, nombre, descripcion, precio, stock
                 FROM productos
@@ -63,6 +66,7 @@ namespace WinFormsApp1.Datos.Persistencia
                     Stock = reader.GetInt32("stock")
                 });
             }
+
             return productos;
         }
 
@@ -85,6 +89,7 @@ namespace WinFormsApp1.Datos.Persistencia
 
             p.Id = Convert.ToInt32(command.ExecuteScalar());
         }
+
         public void Actualizar(Producto p)
         {
             const string sql = @"
@@ -108,6 +113,7 @@ namespace WinFormsApp1.Datos.Persistencia
             command.Parameters.AddWithValue("@stock", p.Stock);
             command.ExecuteNonQuery();
         }
+
         public void Eliminar(int id)
         {
             const string sql = "DELETE FROM productos WHERE id = @id;";
@@ -119,6 +125,7 @@ namespace WinFormsApp1.Datos.Persistencia
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
         }
+
         public void DescontarStock(int productoId, int cantidad)
         {
             const string sql = @"

@@ -28,6 +28,7 @@ namespace WinFormsApp1.Datos.Persistencia
                     Correo = reader.IsDBNull(reader.GetOrdinal("correo")) ? "" : reader.GetString("correo")
                 });
             }
+
             return clientes;
         }
 
@@ -61,8 +62,10 @@ namespace WinFormsApp1.Datos.Persistencia
                     Correo = reader.IsDBNull(reader.GetOrdinal("correo")) ? "" : reader.GetString("correo")
                 });
             }
+
             return clientes;
         }
+
         public int Agregar(Cliente c)
         {
             const string sql = @"
@@ -80,6 +83,7 @@ namespace WinFormsApp1.Datos.Persistencia
             c.Id = Convert.ToInt32(command.ExecuteScalar());
             return c.Id;
         }
+
         public void Actualizar(Cliente c)
         {
             const string sql = @"
@@ -99,6 +103,7 @@ namespace WinFormsApp1.Datos.Persistencia
             command.Parameters.AddWithValue("@correo", c.Correo);
             command.ExecuteNonQuery();
         }
+
         public void Eliminar(int id)
         {
             const string sql = "DELETE FROM clientes WHERE id = @id;";

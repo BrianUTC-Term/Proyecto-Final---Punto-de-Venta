@@ -8,7 +8,7 @@ namespace WinFormsApp1.Negocio
 {
     public static class VentaNegocio
     {
-        // Valida la venta, recalcula el total y descuenta stock de forma atomica en Datos.
+        // Valida la venta, recalcula el total y descuenta stock.
         public static void Registrar(VentaCabecera venta)
         {
             //validaciones de negocio

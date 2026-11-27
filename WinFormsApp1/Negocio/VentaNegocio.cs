@@ -8,10 +8,8 @@ namespace WinFormsApp1.Negocio
 {
     public static class VentaNegocio
     {
-        // Valida la venta, recalcula el total y descuenta stock de forma atomica en Datos.
         public static void Registrar(VentaCabecera venta)
         {
-            //validaciones de negocio
             if (venta.ClienteId <= 0)
                 throw new NegocioException("Debes seleccionar un cliente.");
             if (venta.Detalles.Count == 0)
@@ -33,14 +31,12 @@ namespace WinFormsApp1.Negocio
 
                 total += detalle.Cantidad * detalle.PrecioUnitario;
             }
-
             venta.Fecha = DateTime.Now;
             venta.Total = total;
             RepositorioFactory.Ventas.Registrar(venta);
         }
 
         public static List<VentaDetalle> ObtenerDetallesVendidos() => RepositorioFactory.Ventas.ObtenerDetallesVendidos();
-
         public static List<VentaCabecera> ObtenerVentasConCliente() => RepositorioFactory.Ventas.ObtenerVentasConCliente();
     }
 }

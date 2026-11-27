@@ -37,8 +37,6 @@ namespace WinFormsApp1.Presentacion
             }
             while (opcion != "0");
         }
-
-        // ---- Submenu Productos ----
         private static void MenuProductos()
         {
             string opcion;
@@ -81,7 +79,6 @@ namespace WinFormsApp1.Presentacion
             }
             while (opcion != "0");
         }
-
         private static void ListarProductos()
         {
             Console.WriteLine();
@@ -94,7 +91,6 @@ namespace WinFormsApp1.Presentacion
             foreach (var p in productos)
                 Console.WriteLine($"[{p.Id}] {p.Codigo} - {p.Nombre} - ${p.Precio:0.00} - Stock: {p.Stock}");
         }
-
         private static void AgregarProducto()
         {
             Console.WriteLine();
@@ -126,7 +122,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("Error: " + ex.Message);
             }
         }
-
         private static void ModificarProducto()
         {
             ListarProductos();
@@ -139,7 +134,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("Producto no encontrado.");
                 return;
             }
-
             Console.WriteLine("Deja en blanco para mantener el valor actual.");
             Console.Write($"Codigo [{producto.Codigo}]: ");
             string codigo = Console.ReadLine() ?? "";
@@ -168,7 +162,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("Error: " + ex.Message);
             }
         }
-
         private static void EliminarProducto()
         {
             ListarProductos();
@@ -186,8 +179,6 @@ namespace WinFormsApp1.Presentacion
             ProductoNegocio.Eliminar(id);
             Console.WriteLine("Producto eliminado.");
         }
-
-        // ---- Submenu Clientes ----
         private static void MenuClientes()
         {
             string opcion;
@@ -243,7 +234,6 @@ namespace WinFormsApp1.Presentacion
             foreach (var c in clientes)
                 Console.WriteLine($"[{c.Id}] {c.Nombre} - Tel: {c.Telefono} - Correo: {c.Correo}");
         }
-
         private static void AgregarCliente()
         {
             Console.WriteLine();
@@ -264,7 +254,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("Error: " + ex.Message);
             }
         }
-
         private static void ModificarCliente()
         {
             ListarClientes();
@@ -277,7 +266,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("Cliente no encontrado.");
                 return;
             }
-
             Console.WriteLine("Deja en blanco para mantener el valor actual.");
             Console.Write($"Nombre [{cliente.Nombre}]: ");
             string nombre = Console.ReadLine() ?? "";
@@ -300,7 +288,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("Error: " + ex.Message);
             }
         }
-
         private static void EliminarCliente()
         {
             ListarClientes();

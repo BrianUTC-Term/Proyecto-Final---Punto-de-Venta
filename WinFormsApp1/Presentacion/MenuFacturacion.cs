@@ -20,7 +20,6 @@ namespace WinFormsApp1.Presentacion
                 ConsolaHelper.Pausar();
                 return;
             }
-
             var detalles = new List<VentaDetalle>();
             bool continuar = true;
             do
@@ -59,7 +58,6 @@ namespace WinFormsApp1.Presentacion
 
             ConsolaHelper.Pausar();
         }
-
         private static Cliente? SeleccionarCliente()
         {
             do
@@ -86,7 +84,6 @@ namespace WinFormsApp1.Presentacion
             }
             while (true);
         }
-
         private static Cliente? CrearClienteRapido()
         {
             Console.WriteLine();
@@ -121,7 +118,6 @@ namespace WinFormsApp1.Presentacion
 
             return creado;
         }
-
         private static void AgregarProducto(List<VentaDetalle> detalles)
         {
             Console.WriteLine();
@@ -136,7 +132,6 @@ namespace WinFormsApp1.Presentacion
                 Console.WriteLine("No se encontraron productos.");
                 return;
             }
-
             for (int i = 0; i < productos.Count; i++)
                 Console.WriteLine($"{i + 1}. {productos[i].Nombre} - ${productos[i].Precio:0.00} (Stock: {productos[i].Stock})");
             Console.Write("Selecciona un producto (0 para cancelar): ");
